@@ -1,0 +1,68 @@
+/* Base settings for HTML and Body: Full height, no margin, no padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Prevents scrolling */
+    position: relative;
+}
+
+/* Background video styling */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Ensure it stays behind the image and content */
+}
+
+/* Overlay background image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../eephotos/watch.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Above the video but below everything else */
+}
+
+/* Container for the images at the top left */
+.top-right-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Width of the stacked images */
+    height: 400px; /* Total height of both images */
+    z-index: 100; /* Ensures it is above the video and background image */
+}
+
+/* Style for image links */
+.image-link img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Scale images on hover */
+.image-link:hover img {
+    transform: scale(1.1); /* Enlarges the image by 10% */
+}
+
+/* Style for Mr. Roboto image fixed to the top right corner */
+.mr-roboto {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    display: block; /* Ensures the image is properly displayed */
+    z-index: 100; /* Ensures it is above the video and background image */
+}
